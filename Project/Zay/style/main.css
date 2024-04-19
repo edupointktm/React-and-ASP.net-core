@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.flex, #slider .contianer, header .contianer .nav ul, header .contianer, #top .contianer .address, #top .contianer {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-layout, #slider .contianer, header .contianer, #top .contianer {
+  width: 1200px;
+  margin: auto;
+}
+
+#top {
+  background-color: #212934;
+  color: white;
+  padding: 10px 0;
+  font-size: 12px;
+}
+#top .contianer .address .email {
+  margin: 0 25px 0 0;
+}
+#top .contianer .social-media i {
+  padding: 0 15px;
+}
+
+header .contianer .logo {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ab5959;
+  padding: 10px 0;
+}
+header .contianer .nav ul li {
+  margin: 0 45px;
+  font-weight: 300;
+  font-size: 17px;
+}
+header .contianer .nav ul li a:hover {
+  color: #ab5959;
+}
+#slider {
+  background-color: #EFEFEF;
+}
+#slider .contianer .text-body {
+  width: 650px;
+  color: rgb(76, 76, 76);
+}
+#slider .contianer .text-body .heading {
+  color: #ab5959;
+  font-size: 48px;
+}
+#slider .contianer .text-body .sub-heading {
+  font-size: 30px;
+  font-weight: 300;
+  padding: 10px 0;
+}
+#slider .contianer .text-body .content {
+  font-size: 18px;
+  line-height: 25px;
+}
+#slider .contianer .image img {
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=main.css.map */
