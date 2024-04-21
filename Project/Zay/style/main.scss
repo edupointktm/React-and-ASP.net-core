@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+
+
 * {
     padding: 0;
     margin: 0;
@@ -18,119 +20,20 @@ ul {
     list-style: none;
 }
 
-$primary_color: #ab5959;
-$secondary_color: rgb(76, 76, 76);
-$heading:48px;
-$sub-heading:30px;
-$content:18px;
+@import "partial/variable";
 
-.flex {
-    display: flex;
-    gap: 10px;
-    justify-content: space-between;
-    align-items: center;
-}
-.page-layout{
-    width: 1200px;
-    margin: auto;
-}
+@import "partial/extend";
+
+@import "partial/mixin";
+
+@import "partial/top";
+
+@import "partial/header";
+
+@import "partial/slider";
+
+@import "partial/cat"
 
 
-#top {
-    background-color: #212934;
-    color: white;
-
-    padding: 10px 0;
-    font-size: 12px;
-
-    .contianer {
-        @extend .page-layout;
-
-        @extend .flex;
-
-        .address {
-            @extend .flex;
-
-            .email {
-
-                margin: 0 25px 0 0;
-            }
-
-            .contact {}
-        }
-
-        .social-media {
-            i {
-                padding: 0 15px;
-            }
-        }
-    }
-}
 
 
-header {
-    .contianer {
-        @extend .page-layout;
-        @extend .flex;
-        .logo {
-            font-size: $heading;
-            font-weight: 700;
-            color: $primary_color;
-            padding: 10px 0
-        }
-        .nav {          
-            ul {
-                @extend .flex;
-                li {
-                    margin:0 45px ;
-                    font-weight: 300;
-                    font-size: 17px;
-                    a {
-                        
-                        &:hover{
-                            color: $primary_color;
-                        }                    
-                    }                    
-                }
-            }
-        }
-        .navbar {
-            i {}
-        }
-    }
-}
-
-#slider{
-    background-color:#EFEFEF;
-    .contianer{
-        @extend .page-layout;
-        @extend .flex;
-        .text-body{
-            
-            width: 650px;
-            color: $secondary_color;
-            .heading{
-                color:$primary_color;
-                
-                font-size: $heading;
-            }
-            .sub-heading{
-                font-size: 30px;
-                font-weight: 300;
-                padding: 10px 0;
-                
-            }
-            .content{
-                font-size: 18px;
-                line-height: 25px;
-            }
-        }
-
-        .image{
-            img{
-                width: 100%;
-                height: 100%;
-            }
-        }
-    }
-}

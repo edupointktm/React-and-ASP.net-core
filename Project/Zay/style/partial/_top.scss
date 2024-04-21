@@ -1,0 +1,30 @@
+#top {
+    background-color: #212934;
+    color: white;
+
+    padding: 10px 0;
+    font-size: 12px;
+
+    .contianer {
+        @extend .page-layout;
+
+        @extend .flex;
+
+        .address {
+            @extend .flex;
+
+            .email {
+
+                margin: 0 25px 0 0;
+            }
+
+            .contact {}
+        }
+
+        .social-media {
+            i {
+                padding: 0 15px;
+            }
+        }
+    }
+}

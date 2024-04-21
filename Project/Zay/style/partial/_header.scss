@@ -1,0 +1,31 @@
+header {
+    .contianer {
+        @extend .page-layout;
+        @extend .flex;
+
+        .logo {
+           @include heading()
+        }
+
+        .nav {
+            ul {
+                @extend .flex;
+
+                li {
+                    margin: 0 45px;
+                    font-weight: 300;
+                    font-size: 17px;
+
+                    a {
+
+                        &:hover {
+                            color: $primary_color;
+                        }
+                    }
+                }
+            }
+        }
+
+        
+    }
+}

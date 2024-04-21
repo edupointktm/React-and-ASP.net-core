@@ -1,0 +1,14 @@
+@mixin heading($fs:48px, $fw:700, $color:$primary_color) {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $color;
+    padding: 10px 0
+}
+
+@mixin button() {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: $primary_color;
+    color: white;
+    border-radius: 5px;
+}

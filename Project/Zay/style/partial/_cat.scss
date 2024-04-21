@@ -1,0 +1,46 @@
+#categories {
+    .contianer {
+        text-align: center;
+        @extend .page-layout;
+
+        .heading {
+            @include heading(48px, 300, $primary_color)
+        }
+
+        .content {
+            color:$secondary_color;
+            padding: 10px 0;
+
+        }
+
+        .items-body {
+            @extend .flex;
+            .card {
+                width: 350px;
+
+                // border: 1px solid green;
+                .image {
+                    height: 350px;
+
+                    img {
+                        border-radius: 50%;
+                        width: 100%;
+                        height: 100%;
+                    
+                    }
+                }
+
+                .title {
+                    @include heading(20px, 500, $secondary_color);
+                    
+                }
+
+                .button {
+                    @include button();
+                }
+            }
+
+        }
+    }
+
+}
