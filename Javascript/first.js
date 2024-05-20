@@ -1,0 +1,5 @@
+//  alert("Welcome to Javascript world by alert")
+//         confirm("Welcome to Javascript world by confirm")
+//         prompt("Welcome to Javascript world by prompt")
+        // document.write("Welcome to Javascript world by document")
+        console.log("Welcome to Javascript world by console")
