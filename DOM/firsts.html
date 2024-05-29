@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="title">
+    <button onclick="changeTitle()" id="btn">Click Me</button>
+    <hr>
+    <label for="">First Number</label>
+    <input type="text">
+    <label for="">Second Number</label>
+    <input type="text">
+    <button>ADD</button>
+    <button>MUL</button>
+    <div> <H1>Result : </H1></div>
+    <script>
+       
+       function changeTitle(){
+        let get_value  = document.getElementById('title').value
+        
+        document.title=get_value
+
+        // document.getElementById('btn').innerHTML=get_value
+        document.querySelector('#btn').innerHTML=get_value
+
+    }
+
+       
+    </script>
+</body>
+</html>

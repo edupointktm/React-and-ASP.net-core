@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color:black
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color:red;
+}
+
+#banner{
+    padding: 50px 0;
+    text-align: center;
+    font-size: 45px;
+    color: white;
+    background-image: url("https://img.pikbest.com/backgrounds/20200810/abstract-blue-gradient-background-design-vector-template-v_2453974jpg!sw800");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer{
+    padding: 15px;
+    text-align: center;
+    background-color: darkblue;
+    font-size: 18px;
+    color:rgb(213, 211, 211)
+    
+}
+
+.categories{
+    /* background-color: rgb(212, 212, 212); */
+    border: rgb(193, 193, 193) 2px solid;
+}
