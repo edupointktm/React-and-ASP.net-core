@@ -19,7 +19,7 @@ function Home() {
                             </div>
                         </div>
 
-                        {Items.map((i) =>
+                        {Items.filter((i)=>'Health & Beauty'=='cat'?i:'Mens Fashion').map((i) =>
                             <Link to={`/items_details/${i.id}`} className="col-2 d-flex ">
                                
                                     <div className="card mx-1" style={{ width: '18rem' }}>
