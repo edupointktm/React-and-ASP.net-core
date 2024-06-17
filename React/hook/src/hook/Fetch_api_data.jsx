@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 function Fetch_api_data() {
     let [api_data, setApi_data] = useState([])
@@ -18,13 +19,16 @@ function Fetch_api_data() {
         <>
             <div className="container-fluid">
                 <h3>Categories</h3>
-                <div className="row bg-primary text-white">
+                <div className="row bg-primary text-white py-2">
                     {api_cat.map((ac) =>
 
                         <div className="col-2">
-                            <h5>{ac}</h5>
+                            <h5><Link to={`/catwise/${ac}`} className='nav-link'> {ac} </Link></h5>
                         </div>
                     )}
+                    <div className="col">
+                        <input type="text" name="search" /> 
+                    </div>
                 </div>
             </div>
 
@@ -42,8 +46,11 @@ function Fetch_api_data() {
                                     <a href="#" className="btn btn-primary">Go somewhere</a>
                                 </div>
                             </div>
+
                         </div>
+
                     )}
+
                 </div>
             </div>
 

@@ -14,7 +14,8 @@ function Home() {
                             <div className='categories text-secondary'>
                                 <div className='bg-dark text-white fs-3 text-center'>CATEGORIES</div>
                                 {Categories.map((cat) =>
-                                    <div className='py-1 px-2'><ul><li><a href="#">{cat}</a></li></ul></div>
+                                    <div className='py-1 px-2'><ul><li>
+                                        <a href={cat}>{cat}</a></li></ul></div>
                                 )}
                             </div>
                         </div>

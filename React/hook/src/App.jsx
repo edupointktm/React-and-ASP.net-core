@@ -1,17 +1,33 @@
-import React from 'react'
+import React, { createContext } from 'react'
 import Event_handling from './Event_handling'
 import UseState from './hook/UseState'
 import Fetch_api_data from './hook/Fetch_api_data'
+import Form from './hook/Form'
+import ComponentA from './hook/group/ComponentA'
+import { Route, Routes } from 'react-router-dom'
+import CatWise from './hook/CatWise'
 
+export let nameContext = createContext()
 function App() {
-  let names='Garib Regmi'
+  
+  let names = 'Garib Regmi'
   let address = "Kathmandu"
+  let users = "Ram kumar Regmi"
   return (
     <>
-    {/* <Event_handling n={names} add={address}/> */}
+      {/* <Event_handling n={names} add={address}/> */}
 
-    {/* <UseState/> */}
-    <Fetch_api_data/>
+      {/* <UseState/> */}
+      {/* <Form/> */}
+      <Routes>
+        <Route path="/" element={<Fetch_api_data/>}/> 
+        <Route path="/catwise/:cat_id" element={<CatWise/>}/> 
+
+      </Routes>
+
+      {/* <nameContext.Provider value={users}>
+        <ComponentA />
+      </nameContext.Provider > */}
     </>
   )
 }
