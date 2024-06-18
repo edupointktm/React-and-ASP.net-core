@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 
 function Items_Search() {
-    let [count, setCount] = useState(10)
-    let [tempcount, setTempCount] = useState(5)
+    // let [count, setCount] = useState(10)
+    // let [tempcount, setTempCount] = useState(5)
 
     let [title, setTitle] = useState([])
     let [search, setSearch]=useState("")
@@ -18,8 +18,7 @@ function Items_Search() {
     let decrease = () => {
         setCount(count - 1)
     }
-    let getSearch=(e)=>{
-      
+    let getSearch=(e)=>{      
         setSearch(e.target.value)
     }
     return (
@@ -28,8 +27,7 @@ function Items_Search() {
             <div className="container py-5">
                 <div className="row">
                
-                    <div className="col">
-                        
+                    <div className="col">                        
                         <input type="text"  name="txtsearch" onChange={getSearch}/>
                     </div>
                 </div>
