@@ -6,6 +6,7 @@ import Form from './hook/Form'
 import ComponentA from './hook/group/ComponentA'
 import { Route, Routes } from 'react-router-dom'
 import CatWise from './hook/CatWise'
+import Items_Search from './hook/Items_Search'
 
 export let nameContext = createContext()
 function App() {
@@ -19,15 +20,16 @@ function App() {
 
       {/* <UseState/> */}
       {/* <Form/> */}
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Fetch_api_data/>}/> 
         <Route path="/catwise/:cat_id" element={<CatWise/>}/> 
 
-      </Routes>
+      </Routes> */}
 
       {/* <nameContext.Provider value={users}>
         <ComponentA />
       </nameContext.Provider > */}
+      <Items_Search/>
     </>
   )
 }

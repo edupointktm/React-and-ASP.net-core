@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 function Fetch_api_data() {
     let [api_data, setApi_data] = useState([])
     let [api_cat, setApi_cat] = useState([])
+    let [search, setSearch]=useState()
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
             .then(res => res.json())
@@ -14,7 +15,10 @@ function Fetch_api_data() {
             .then(data => setApi_cat(data))
 
     }, [])
-
+    let handlechange = (e)=>{
+        setSearch(e.target.value)
+        console.log(search)
+    }
     return (
         <>
             <div className="container-fluid">
@@ -27,7 +31,7 @@ function Fetch_api_data() {
                         </div>
                     )}
                     <div className="col">
-                        <input type="text" name="search" /> 
+                        <input type="text" name="search" value={search} onChange={(e)=>handlechange(e)} /> 
                     </div>
                 </div>
             </div>
@@ -37,8 +41,8 @@ function Fetch_api_data() {
                 <div className="row">
                     {api_data.map((ad) =>
                         <div className="col-3 py-1">
-                            <div className="card" style={{ width: '18rem' }}>
-                                <img src={ad.image} className="card-img-top" alt="..." width="10%" />
+                            <div className="card h-100 py-4" >
+                                <img src={ad.image} className="card-img-top" alt="..." height="250px" />
                                 <div className="card-body">
                                     <h5 className="card-title">{ad.title}</h5>
                                     <p className="card-text">{ad.description}</p>
