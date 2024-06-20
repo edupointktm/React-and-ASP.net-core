@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
 function Items_Search() {
@@ -6,11 +7,15 @@ function Items_Search() {
 
     let [title, setTitle] = useState([])
     let [search, setSearch]=useState("")
+    let [error, setError]=useState("")
     
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/todos')
-            .then(response => response.json())
-            .then(data => setTitle(data))
+        // fetch('https://jsonplaceholder.typicode.com/todos')
+        //     .then(response => response.json())
+        //     .then(data => setTitle(data))
+
+        axios.get("https://jsonplaceholder.typicode.com/todos")
+        .then((res)=>{setTitle(res.data)}).catch((err)=>{setError(err.message)})
     }, [])
 
     let searchData = title.filter((sd)=>sd.title.includes(search))
@@ -25,6 +30,7 @@ function Items_Search() {
         <>
 
             <div className="container py-5">
+                <h1>{error}</h1>
                 <div className="row">
                
                     <div className="col">                        

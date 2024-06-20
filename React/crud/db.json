@@ -1,0 +1,13 @@
+{
+    "users":[
+        {
+            "id":1,
+            "name":"Prabhat Kumar",
+            "gender":"Male",
+            "address":"Janakpur",
+            "email":"prabhat@gmail.com",
+            "password":"prabhat@123"
+        }
+    ]
+    
+}
