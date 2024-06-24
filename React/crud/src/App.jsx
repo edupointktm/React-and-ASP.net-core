@@ -1,6 +1,34 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 
 function App() {
+  let [user_data, setUser_data] = useState([])
+  let [input_data, setinput_data] = useState({
+    name: '',
+    gender: '',
+    address: '',
+    email: '',
+    password: ''
+  })
+
+
+  useEffect(() => {
+    axios.get("http://localhost:3000/users")
+      .then((res) => setUser_data(res.data))
+
+
+  }, [])
+
+  let setData = (e) => {
+    setinput_data({...input_data, [e.target.name]:e.target.value})
+    
+    
+  }
+
+  let saveData=()=>{
+    axios.post('http://localhost:3000/users', input_data)    
+    alert("Sucecssfully Save")
+  }
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -65,11 +93,32 @@ function App() {
                     <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
                   </div>
                   <div className="modal-body">
-                    ...
+                    <div>
+                      <div className="row">
+                        <div className="col-12">
+                          <label htmlFor="username" className="form-label">User Name</label>
+                          <input type="text" id="user_name" className="form-control" name="name" onChange={setData} />
+                        </div>
+                        <div className="col-12">
+                          <label htmlFor="username" className="form-label">Gender</label>
+                          <input type="text" id="gender" className="form-control" name="gender" onChange={setData} />
+                        </div>
+
+                        <div className="col-12">
+                          <label htmlFor="username" className="form-label">Address</label>
+                          <input type="text" id="user_name" className="form-control" name="address" onChange={setData} />
+                        </div>
+                        <div className="col-12">
+                          <label htmlFor="username" className="form-label">Email</label>
+                          <input type="text" id="gender" className="form-control" name="email" onChange={setData}/>
+                        </div>
+                      </div>
+                    </div>
+
                   </div>
                   <div className="modal-footer">
                     <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" className="btn btn-primary">Save changes</button>
+                    <button type="button" className="btn btn-primary" onClick={saveData}>Save changes</button>
                   </div>
                 </div>
               </div>
@@ -92,16 +141,18 @@ function App() {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-              <td>@mdo</td>
-              <td>@mdo</td>
-              <td><button className='btn btn-primary'>EDIT</button> | <button className='btn btn-danger'>DELETE</button></td>
-            </tr>
+            {user_data.map((ud, i) =>
+              <tr>
+                <th scope="row">{i + 1}</th>
 
+                <td>{ud.name}</td>
+                <td>{ud.gender}</td>
+                <td>{ud.address}</td>
+                <td>{ud.mobile}</td>
+                <td>{ud.email}</td>
+                <td><button className='btn btn-primary'>EDIT</button> | <button className='btn btn-danger'>DELETE</button></td>
+              </tr>
+            )}
           </tbody>
         </table>
       </div>

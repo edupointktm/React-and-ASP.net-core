@@ -1,13 +1,28 @@
 {
-    "users":[
-        {
-            "id":1,
-            "name":"Prabhat Kumar",
-            "gender":"Male",
-            "address":"Janakpur",
-            "email":"prabhat@gmail.com",
-            "password":"prabhat@123"
-        }
-    ]
-    
+  "users": [
+    {
+      "id": 1,
+      "name": "Prabhat Kumar",
+      "gender": "Male",
+      "address": "Janakpur",
+      "email": "prabhat@gmail.com",
+      "password": "prabhat@123"
+    },
+    {
+      "id": 2,
+      "name": "Suresh Dhakal",
+      "gender": "Male",
+      "address": "Pokhara",
+      "email": "suresh@gmail.com",
+      "password": "suresh@123"
+    },
+    {
+      "id": "f2da",
+      "name": "moha",
+      "gender": "female",
+      "address": "jnk",
+      "email": "pkm",
+      "password": ""
+    }
+  ]
 }
