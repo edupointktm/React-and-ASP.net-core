@@ -1,27 +1,90 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Prabhat Kumar",
+      "id": "2",
+      "name": "Prabhata Kumar Mallik",
       "gender": "Male",
+      "address": "Kathamandu",
+      "email": "pkm@gmail.com"
+    },
+    {
+      "id": "1ec6",
+      "name": "hari om",
+      "gender": "male",
       "address": "Janakpur",
-      "email": "prabhat@gmail.com",
-      "password": "prabhat@123"
+      "email": "hariom@gmail.com",
+      "password": ""
     },
     {
-      "id": 2,
-      "name": "Suresh Dhakal",
+      "id": "08cd",
+      "name": "Sunita Mandal",
+      "gender": "Female",
+      "address": "pokhara",
+      "email": "sunit@gmail.com",
+      "password": ""
+    },
+    {
+      "id": "2f8f",
+      "name": "test",
+      "gender": "test",
+      "address": "test",
+      "email": "test",
+      "password": ""
+    },
+    {
+      "id": "7094",
+      "name": "sdfds",
+      "gender": "sdfsd",
+      "address": "sdf",
+      "email": "sdf",
+      "password": ""
+    },
+    {
+      "id": "8855",
+      "name": "mohan",
+      "gender": "hari",
+      "address": "suni",
+      "email": "gita",
+      "password": ""
+    },
+    {
+      "id": "3e08",
+      "name": "sdgsd",
+      "gender": "sdgdfg",
+      "address": "dfgfd",
+      "email": "test",
+      "password": ""
+    },
+    {
+      "id": "b0f9",
+      "name": "Rita",
+      "gender": "Female",
+      "address": "Janakpur",
+      "email": "rita@gmail.com",
+      "password": ""
+    },
+    {
+      "id": "062b",
+      "name": "Sunita",
+      "gender": "Female",
+      "address": "Kathmandu",
+      "email": "sunita@dopm.gov.np",
+      "password": ""
+    },
+    {
+      "id": "ae22",
+      "name": "Rohit",
       "gender": "Male",
-      "address": "Pokhara",
-      "email": "suresh@gmail.com",
-      "password": "suresh@123"
+      "address": "Dhankuta",
+      "email": "rohit@test",
+      "password": ""
     },
     {
-      "id": "f2da",
-      "name": "moha",
-      "gender": "female",
-      "address": "jnk",
-      "email": "pkm",
+      "id": "ac6f",
+      "name": "Mukesh Dhakal",
+      "gender": "Male",
+      "address": "India",
+      "email": "mukesh@gmail.com",
       "password": ""
     }
   ]
