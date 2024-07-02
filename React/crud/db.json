@@ -5,7 +5,8 @@
       "name": "Prabhata Kumar Mallik",
       "gender": "Male",
       "address": "Kathamandu",
-      "email": "pkm@gmail.com"
+      "email": "pkm@gmail.com",
+      "password": "pkm"
     },
     {
       "id": "1ec6",
@@ -13,7 +14,7 @@
       "gender": "male",
       "address": "Janakpur",
       "email": "hariom@gmail.com",
-      "password": ""
+      "password": "hari"
     },
     {
       "id": "08cd",
@@ -21,7 +22,7 @@
       "gender": "Female",
       "address": "pokhara",
       "email": "sunit@gmail.com",
-      "password": ""
+      "password": "sunit"
     },
     {
       "id": "2f8f",
@@ -87,5 +88,21 @@
       "email": "mukesh@gmail.com",
       "password": ""
     }
+  ],
+  
+
+  "prodcuts": [
+  {
+      "id":"1",
+      "Name":"",
+      "brand":"", 
+      "category":"", 
+      "price":"", 
+      "description":"",
+      "imagefilename":"1.jpg", 
+      "createdat":""
+    }
   ]
+  
+
 }

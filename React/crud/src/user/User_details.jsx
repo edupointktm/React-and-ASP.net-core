@@ -7,7 +7,9 @@ function User_details() {
   let [showAddUserModal, setShowAddUserModal] = useState(false)
   let [user_data, setUser_data] = useState([])
   let [getEditID, setGetEditID] = useState("")
+  let [search, setSearch] = useState("")
 
+  
   useEffect(() => {
     getAllusers()
 
@@ -29,11 +31,18 @@ function User_details() {
   return (
     <>
       <div className="container py-2">
-        <button type="button" className="btn btn-primary"
-          onClick={() => { setShowAddUserModal(true) }}
-        >
-          ADD NEW
-        </button>
+        <div className="row d-flex justify-between">
+          <div className="col">
+            <input type="text" onChange={(e)=>setSearch(e.target.value)}/>
+          </div>
+          <div className="col">
+            <button type="button" className="btn btn-primary"
+              onClick={() => { setShowAddUserModal(true) }}
+            >
+              ADD NEW
+            </button>
+          </div>
+        </div>
       </div>
       <div className="container">
         <div className="row">
@@ -51,7 +60,7 @@ function User_details() {
                 </tr>
               </thead>
               <tbody>
-                {user_data.map((ud, i) =>
+                {user_data.filter((ud)=>ud.name.toLowerCase().includes(search)).map((ud, i) =>
                   <tr key={i}>
                     <th scope="row">{i + 1}</th>
 
