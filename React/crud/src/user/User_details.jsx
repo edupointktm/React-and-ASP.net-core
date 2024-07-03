@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import User_create from './User_create'
+import Nav from '../component/Nav'
 import { Button, Modal } from 'react-bootstrap'
 
 function User_details() {
@@ -30,6 +31,7 @@ function User_details() {
   }
   return (
     <>
+    <Nav/>
       <div className="container py-2">
         <div className="row d-flex justify-between">
           <div className="col">

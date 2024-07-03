@@ -10,7 +10,7 @@
     },
     {
       "id": "1ec6",
-      "name": "hari om",
+      "name": "hari om Adhikari",
       "gender": "male",
       "address": "Janakpur",
       "email": "hariom@gmail.com",
@@ -21,7 +21,7 @@
       "name": "Sunita Mandal",
       "gender": "Female",
       "address": "pokhara",
-      "email": "sunit@gmail.com",
+      "email": "sunit1@gmail.com",
       "password": "sunit"
     },
     {
@@ -87,22 +87,26 @@
       "address": "India",
       "email": "mukesh@gmail.com",
       "password": ""
+    },
+    {
+      "id": "4107",
+      "name": "rita",
+      "gender": "female",
+      "address": "pokhara",
+      "email": "rita@gmail.com",
+      "password": ""
     }
   ],
-  
-
   "prodcuts": [
-  {
-      "id":"1",
-      "Name":"",
-      "brand":"", 
-      "category":"", 
-      "price":"", 
-      "description":"",
-      "imagefilename":"1.jpg", 
-      "createdat":""
+    {
+      "id": "1",
+      "Name": "",
+      "brand": "",
+      "category": "",
+      "price": "",
+      "description": "",
+      "imagefilename": "1.jpg",
+      "createdat": ""
     }
   ]
-  
-
 }
