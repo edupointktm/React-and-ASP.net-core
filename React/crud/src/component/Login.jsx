@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../assets/login.css'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-
+import { toast } from 'react-toastify';
 
 function Login() {
   let [user_id, setUser_id] = useState()
@@ -20,6 +20,7 @@ function Login() {
     e.preventDefault()
     axios.get("http://localhost:3000/users")
       .then((res) => setUser_data(res.data))
+      toast.success("Login Successfully")
     ///.then((err)=>console.log(err.message))
 
     let getdata = user_data.find((ud) => ud.email == user_id && ud.password == password)

@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Button, Modal } from 'react-bootstrap'
-
+import { toast } from 'react-toastify';
 function User_create(props) {
   // let [showHide, setShowHide]=useState()
 
@@ -68,9 +68,9 @@ function User_create(props) {
       axios.put('http://localhost:3000/users/'+props.getEditID, input_data)
       .then((res) => {
         props.getAdduser()
-        alert("Sucecssfully Modify Your Data")
+        toast.success("Sucecssfully Modify Your Data")
       })
-      .catch((e) => alert(e))
+      .catch((e) => toast.error(e.message))
       
     }
     
